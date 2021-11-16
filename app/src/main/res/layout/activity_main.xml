@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/animation_text"
+        android:text="Animation"
+        android:textColor="@color/white"
+        android:background="@drawable/corner_radius"
+        android:paddingBottom="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp"
+        android:paddingLeft="3dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/image_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/drama_text"
+        android:text="Drama"
+        app:layout_constraintCircleRadius="6dp"
+        app:circularflow_defaultRadius="6dp"
+        android:textColor="@color/white"
+        android:background="@drawable/corner_radius"
+        android:paddingLeft="3dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toRightOf="@id/animation_text"
+        app:layout_constraintTop_toBottomOf="@id/image_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/family_text"
+        android:text="Family"
+        android:paddingLeft="3dp"
+        android:textColor="@color/white"
+        android:background="@drawable/corner_radius"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp"
+        app:layout_constraintLeft_toRightOf="@id/drama_text"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@id/image_view"/>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="256dp"
+        android:src="@drawable/header_image"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/evaluation_text"
+        android:text="7.3/10"
+        android:textColor="@color/light_gray"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/image_view"
+        app:layout_goneMarginRight="13dp"
+        tools:layout_editor_absoluteX="310dp" />
+    
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/star_image"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/star_image"
+        android:paddingLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/image_view"
+        app:layout_constraintLeft_toRightOf="@id/evaluation_text" />
+
+    <TextView
+        android:id="@+id/directors_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="20dp"
+        android:text="Directors"
+        android:textColor="@color/medium_gray"
+        app:layout_constraintTop_toBottomOf="@id/animation_text" />
+
+    <TextView
+        android:id="@+id/actor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="8dp"
+        android:text="actor_name"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/animation_text"
+        app:layout_constraintTop_toBottomOf="@id/animation_text" />
+
+    <TextView
+        android:id="@+id/stars_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="20dp"
+        android:text="Stars"
+        android:textColor="@color/medium_gray"
+        app:layout_constraintTop_toBottomOf="@id/directors_textView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="8dp"
+        android:text="star_name"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/animation_text"
+        app:layout_constraintTop_toBottomOf="@id/actor_name" />
+
+    <EditText
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintTop_toBottomOf="@id/animation_text"
+        android:text="In an unnamed Victorian town, Victor Van Dort, the son of nouveau riche fish merchants, and Victoria Everglot, the abused and unloved daughter of impoverished aristocrats, prepare for their arranged marriage, which will simultaneously raise the social class of Victor's parents and restore the wealth of Victoria's family ("According to Plan"). Although they fall in love instantly, the nervous Victor ruins their wedding rehearsal by forgetting his vows and accidentally setting Lady Everglot's dress on fire. Fleeing to a nearby forest, he practises his vows with a tree and places his wedding ring on an upturned root. However, the root is revealed to be the finger of a dead woman named Emily, who rises from the grave claiming that she is now Victor's wife, and spirits him away to the Land of the Dead."
+    />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:text="Play movie"
+        android:textSize="16dp"
+        android:backgroundTint="@color/pastel_blue"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@id/animation_text"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
